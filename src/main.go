@@ -1,4 +1,4 @@
-package src
+package main
 
 import (
 	"bytes"
@@ -44,6 +44,7 @@ func processFile(uri string, extraParams map[string]string, fieldName string, pa
 	if err != nil {
 		panic(err)
 	}
+
 	client := &http.Client{}
 	resp, err := client.Do(request)
 	if err != nil {
